@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: Trebuchet MS;
+	background: #1b1613;
+	font-family: sans-serif;
+	perspective: 1px; 
+	transform-style: preserve-3d;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: 'Amatic SC', cursive;
+	color: #fff;
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 30%;
+  transform-style: inherit;
+  width: 100vw;
+  color: white;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+}
+
+header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  min-height: 100vh;
+  background-image: url(img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 1s;
+  /* Параллакс */
+  transform: translateZ(-1px) scale(2);
+}
+header h1 {
+  margin-top: -70px;
+  margin-left: -40px;
+  font-size: 42px;
+  opacity: 100%
+}
+
+ 		/*Menu*/
+
+
+.sidebar {
+	position: fixed;
+	width: 250px;
+	/*height: 100%;*/
+	background: #241919;
+	text-align: center;
+	left: -260px;
+	top: 10px;
+	padding-bottom: 10px;
+	transition: 0.4s;
+	border-radius: 10px;
+}
+.sidebar.active {
+	left: 20px;
+}
+
+.sidebar ul li:first-child {
+	/*text-align: center;*/
+	color: white;
+	list-style: none;
+	font-size: 2.2em;
+	padding: 25px 40px 20px 10px;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+}
+
+.sidebar ul li:not(:first-child) {
+	text-align: center;
+	color: white;
+	list-style: none;
+	font-size: 1.6em;
+	padding: 15px 40px 10px 10px;
+
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	transition: .2s;
+}
+
+.sidebar ul li a:hover {
+	color: #ffcc66;
+	/*box-shadow: 0px 0px 30px 0px rgba(255,255,255,1);*/
+}
+
+.sidebar .toggle-btn {
+	position: absolute;
+	left: 270px;
+	top: 20px;
+	background: #D6DAE1;
+	padding: 10px;
+	border-radius: 32px;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.sidebar .toggle-btn:hover {
+	background: #556270;
+}
+.sidebar .toggle-btn:hover span {
+	background: #fafafa;
+}
+
+.sidebar .toggle-btn span {
+	display: block;
+	width: 25px;
+	height: 4px;
+	background-color: #666;
+	margin: 4px;
+	transition: .4s;
+}
+
+		/*Конец меню*/
+
+		/*Кнопка наверх*/
+
+
+.wrapper {
+	background: #241919;
+	width: 70%;
+	height: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	border-radius: 3px;
+
+}
+.content {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p {
+	font-size: 24px;
+}
+.content span {
+	color: #deab3e;
+}
+hr {
+	background-color: #deab3e;
+}
+
+.tf2-title {
+	color: #deab3e;
+}
+
+		/*Карточки красных и синих*/
+
+.card-holder {
+
+	width: 90%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 50px;
+}
+	
+	/*Синие*/
+
+.card-blue {
+	position: relative;
+	margin-top: 30px;
+	margin: 30px;
+	width: 40%;
+	height: 300px;
+	background: #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://wiki.teamfortress.com/w/images/thumb/0/07/Team_blu.png/300px-Team_blu.png);
+	z-index: 9999;
+	transition: 0.4s;
+}
+
+.card-blue:hover {
+	background: #5778e6;
+	box-shadow: 0px 0px 20px 20px rgba(76,136,255,1);
+	background-image: url(https://tf2-game.3dn.ru/tf2wallpaper.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: .4s;
+}
+
+.hovered-blue {
+	display:none;
+    margin-right:-360px;
+    padding:10px;
+    margin-top:5px;
+    background:#f3f3f3;
+    height:20px;
+    opacity: 70%;
+    border-radius: 10px 10px 70px 70px;
+    transition: .4s;
+    animation-name: transforming;
+    animation-duration: .4s;
+    z-index: 2;
+}
+
+.card-blue:hover .hovered-blue {
+	display:block;
+    position:absolute;
+    top:295px;
+    z-index:2;
+    width:200px;
+    transition: .4s;
+}
+
+.hovered-blue a {
+	text-decoration: none;
+}
+
+	/*Красные*/
+
+.card-red {
+	position: relative;
+	margin-top: 30px;
+	margin: 30px;
+	width: 36%;
+	height: 300px;
+	background: #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://wiki.teamfortress.com/w/images/thumb/8/80/Team_red.png/300px-Team_red.png);
+	transition: 0.4s;
+}
+
+.card-red:hover {
+	background: #de4545;
+	box-shadow: 0px 0px 20px 20px rgba(255,74,74,1);
+	background-image: url(img/red.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hovered-red{
+	display:none;
+    margin-right:360px;
+    padding:10px;
+    margin-top:5px;
+    background:#f3f3f3;
+    height:20px;
+    opacity: 70%;
+    border-radius: 10px 10px 70px 70px;
+    transition: .4s;
+    animation-name: transforming;
+    animation-duration: .4s;
+    z-index: 2;
+}
+
+.card-red:hover .hovered-red {
+	display:block;
+    position:absolute;
+    top:295px;
+    z-index:2;
+    width:200px;
+    transition: .4s;
+}
+
+.hovered-red a {
+	text-decoration: none;
+}
+
+	/*Анимация*/
+
+@keyframes transforming {
+	0% {
+		top:285px;
+	}
+	100% {
+		top:295px;
+	}
+}
+
+	/*Карточки классов*/
+
+.class-cards {
+	display: grid;
+	/*flex-direction: row;*/
+	justify-content: space-between;
+	align-items: center;
+	/*grid-template-columns: 380px 380px 380px;*/
+	margin-left: 50px;
+	margin-right: 15px;
+}
+
+/*.class {
+	width: 380px;
+	height: 600px;
+	margin: 20px;
+	cursor: pointer;
+}*/
+
+.atack {
+	display: flex;
+}
+.defence {
+	display: flex;
+}
+.support {
+	display: flex;
+}
+
+.class-container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 60vw;
+}
+
+.class-container .box {
+	position: relative;
+	width: 20vw;
+	height: 60vh;
+	overflow: hidden;
+	margin: 10px;
+	background-size: contain;
+}
+
+.class-container .box .class {
+	position: absolute;
+	width: 20vw;
+	height: 60vh;
+	margin: 10px;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 1.5s ease-in-out;
+}
+
+.class-container .box:hover .class {
+	transform: translateY(110%);
+}
+
+.h2 h2 {
+	color: #deab3e;
+	top: 0;
+}
+
+.h2 p {
+	/*padding: 10px;*/
+	padding-right: 20px;
+}
+
+.h2 a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+}
+.h2 a:hover {
+	color: #fff222;
+}
+
+.class-container .box .layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 1s ease-in-out;
+}
+
+.class-container .box .layer.layer1 {
+	background: #cc941b;
+	transform: translateY(-100%);
+}
+.class-container .box:hover .layer.layer1 {
+	transform: translateY(100%);
+}
+
+.class-container .box .layer.layer2 {
+	background: #d18630;
+	transform: translateY(-200%);
+}
+.class-container .box:hover .layer.layer2 {
+	transform: translateY(100%);
+}
+
+.class-container .box .contentBx {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	color: #fff;
+	transition: 1s ease-in-out;
+	transform: translateY(-300%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.class-container .box:hover .contentBx {
+	transform: translateY(0);
+}
+
+.scout {
+	width: 30vw;
+	height: 60vh;
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/scout.png);
+	background-size: cover;
+}
+.soldier {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/soly.png);
+	background-size: cover;
+}
+.pyro {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/pyro.png);
+	background-size: cover;
+}
+.demo {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/demo.png);
+	background-size: cover;
+}
+.heavy {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/heavy.png);
+	background-size: cover;
+}
+.engi {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/engi.png);
+	background-size: cover;
+}
+.med {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/med.png);
+	background-size: cover;
+}
+.sniper {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/sniper.png);
+	background-size: cover;
+}
+.spy {
+	background-image: url(https://web.informatics.ru/works/17-18/web_online/belikov_g_d/classes/spy.png);
+	background-size: cover;
+}
+
+
+
+

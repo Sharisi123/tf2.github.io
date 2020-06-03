@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: Trebuchet MS;
+	background: #1b1613;
+	font-family: sans-serif;
+	perspective: 1px; 
+	transform-style: preserve-3d;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: 'Amatic SC', cursive;
+	color: #fff;
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 30%;
+  transform-style: inherit;
+  width: 100vw;
+  color: white;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+}
+
+header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  min-height: 100vh;
+  background-image: url(img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 1s;
+  /* Параллакс */
+  transform: translateZ(-1px) scale(2);
+  width: 100vw;
+}
+header h1 {
+  margin-top: -70px;
+  margin-left: -40px;
+  font-size: 42px;
+  opacity: 100%
+}
+
+ 		/*Menu*/
+
+
+.sidebar {
+	position: fixed;
+	width: 250px;
+	/*height: 100%;*/
+	background: #241919;
+	text-align: center;
+	left: -260px;
+	top: 10px;
+	padding-bottom: 10px;
+	transition: 0.4s;
+	border-radius: 10px;
+}
+.sidebar.active {
+	left: 20px;
+}
+
+.sidebar ul li:first-child {
+	/*text-align: center;*/
+	color: white;
+	list-style: none;
+	font-size: 2.2em;
+	padding: 25px 40px 20px 10px;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+}
+
+.sidebar ul li:not(:first-child) {
+	text-align: center;
+	color: white;
+	list-style: none;
+	font-size: 1.6em;
+	padding: 15px 40px 10px 10px;
+
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	transition: .2s;
+}
+
+.sidebar ul li a:hover {
+	color: #ffcc66;
+	/*box-shadow: 0px 0px 30px 0px rgba(255,255,255,1);*/
+}
+
+.sidebar .toggle-btn {
+	position: absolute;
+	left: 270px;
+	top: 20px;
+	background: #D6DAE1;
+	padding: 10px;
+	border-radius: 32px;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.sidebar .toggle-btn:hover {
+	background: #556270;
+}
+.sidebar .toggle-btn:hover span {
+	background: #fafafa;
+}
+
+.sidebar .toggle-btn span {
+	display: block;
+	width: 25px;
+	height: 4px;
+	background-color: #666;
+	margin: 4px;
+	transition: .4s;
+}
+
+		/*Конец меню*/
+
+		/*Кнопка наверх*/
+.back-to-top {
+	position: fixed;
+	right: 10px;
+	bottom: 200px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid red;
+	background-color: #fff;
+}
+
+
+.wrapper {
+	background: #241919;
+	width: 70%;
+	height: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	border-radius: 3px;
+	z-index: 2;
+
+}
+.content {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p {
+	font-size: 24px;
+}
+hr {
+	background-color: #deab3e;
+}
+
+.tf2-title {
+	color: #deab3e;
+}
+
+
+.disc .text {
+	display: flex;
+}
+.disc .text p {
+	margin-right: 20px;
+}
+.disc .text .left-img-soldier{
+	position: relative;
+}
+
+.disc h2 {
+	color: #deab3e;
+}
+#more {
+	display: none;
+}
+a {
+	text-decoration: none;
+	color: #deab3e;
+	cursor: pointer;
+}
+#hide {
+	display: none;
+}
+
+#more1 {
+	display: none;
+}
+#hide1 {
+	display: none;
+}
+
+#more2 {
+	display: none;
+}
+#hide2 {
+	display: none;
+}
+
+#more3 {
+	display: none;
+}
+#hide3 {
+	display: none;
+}

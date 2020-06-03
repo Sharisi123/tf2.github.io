@@ -1,0 +1,4 @@
+[0525/231837.605:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0525/231837.605:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0525/231837.636:ERROR:exception_snapshot_win.cc(98)] thread ID 10704 not found in process
+[0525/231837.636:ERROR:exception_snapshot_win.cc(98)] thread ID 5280 not found in process
